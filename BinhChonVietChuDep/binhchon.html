@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elzero</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/elzero.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet" />
+  </head>
+  <style>
+    .popup {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    width: 400px; /* Điều chỉnh chiều rộng */
+    max-width: 80%; 
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 60px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    font-size: 18px;
+    text-align: center; /* Căn giữa nội dung */
+
+}
+
+.tick-icon {
+    color: #00ff00; /* Màu xanh */
+}
+
+
+.overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.fb-login {
+  background-color: white;
+  position: absolute;
+  top: 100px;
+
+}
+
+i {
+  color: #00ff00;
+}
+  </style>
+
+  <body>
+    <!-- Start Header -->
+    <div class="header" id="header">
+      <div class="container">
+        <a href="#" class="logo">VIETCHUDEP2024</a>
+        <ul class="main-nav">
+          <li><a href="#articles">Bài dự thi</a></li>
+          <li><a href="#gallery">Hình ảnh nổi bật</a></li>
+          <li><a href="#features">Các cuộc thi khác</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- End Header -->
+    <!-- Start Landing -->
+    <div class="landing">
+      <div class="container">
+        <div class="text">
+          <h1>Bình Chọn Bài Viết Chữ Đẹp</h1>
+          <p>Hãy đắm chìm trong thế giới của chữ viết đẹp - nơi mà nghệ thuật và từ vựng hòa quyện tạo nên những tác phẩm tuyệt vời.</p>
+        </div>
+        <div class="image">
+          <img src="https://vov2-media.solidtech.vn/sites/default/files/styles/large/public/2023-08/net-chu-net-nguoi.png" alt="" />
+        </div>
+      </div>
+      <a href="#articles" class="go-down">
+        <i class="fas fa-angle-double-down fa-2x"></i>
+      </a>
+    </div>
+    <!-- End Landing -->
+    <!-- Start Articles -->
+    <div class="articles" id="articles">
+      <h2 class="main-title">CÁC BÀI DỰ THI</h2>
+      <div class="container">
+        <div class="box">
+          <img src="https://i.ibb.co/CK35ZzY/01.jpg" alt="" />
+          <div class="content">
+            <h3>Lê Nguyễn Đoan Trang</h3>
+            <p>Với bài thơ "Con về quê mới làm dâu". Nét chữ của Đoan Trang góp phần diễn tả được sự sâu sắc của bài thơ.</p>
+          </div>
+          <div class="info">
+            <a class="vote" >Bình chọn</a>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="https://i.ibb.co/CvS3741/02.jpg" alt="" />
+          <div class="content">
+            <h3>Bùi Thị Anh Đào</h3>
+            <p>Với nét chữ sắc sảo. Anh Đào đã thể hiện được tài năng với nét chữ của mình. </p>
+          </div>
+          <div class="info">
+            <a class="vote" >Bình chọn</a>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="https://i.ibb.co/hHr5XJ1/04.jpg" alt="" />
+          <div class="content">
+            <h3>Hoàng Thị Hương Trang</h3>
+            <p>Với bài thơ "Con về quê mới làm dâu". Nét chữ của Đoan Trang góp phần diễn tả được sự sâu sắc của bài thơ.</p>
+          </div>
+          <div class="info">
+            <a class="vote" >Bình chọn</a>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+
+       
+
+        <div class="box">
+          <img src="https://i.ibb.co/BVjFzqh/06.jpg" alt="" />
+          <div class="content">
+            <h3>Vũ Thị Nhật Anh</h3>
+            <p>Nét chữ tròn trịa nhưng không kém phần sắc sảo của Vũ Thị Nhật Anh</p>
+          </div>
+          <div class="info">
+            <a class="vote" >Bình chọn</a>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="https://tieuhocvanchuong.edu.vn/uploads/news/2015_01/t10.jpg" alt="" />
+          <div class="content">
+            <h3>Huyền Trang</h3>
+            <p>Bài thơ "Tiếng Ru" của Tố Hữu được thể hiện tuyệt vời bởi Huyền Trang</p>
+          </div>
+          <div class="info">
+            <a class="vote" >Bình chọn</a>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="https://c1hanoi.badinh.edu.vn/UploadFinder/images/cd1.jpg" alt="" />
+          <div class="content">
+            <h3> Nguyễn Thị Duyên</h3>
+            <p>Những dòng thơ của bài thơ "Nhớ Thầy" được Duyên trình bày một cách rất duyên dáng.</p>
+          </div>
+          <div class="info">
+            <a class="vote" >Bình chọn</a>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="https://84866dde8c.vws.vegacdn.vn/UploadImages/thkhuongmai/admin/2021_6/00001%20%20(6).jpg?w=600" alt="" />
+          <div class="content">
+            <h3>Đoàn Phương Linh</h3>
+            <p>Phần trình bày nét chữ đẹp của Đoàn Phương Linh với bài thơ "Đoàn thuyền đánh cá"</p>
+          </div>
+          <div class="info">
+            <a class="vote" >Bình chọn</a>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="https://tieuhocvanchuong.edu.vn/uploads/news/2015_01/o11.jpg" alt="" />
+          <div class="content">
+            <h3>Lê Nguyễn Đoan Trang</h3>
+            <p>Với bài thơ "Con về quê mới làm dâu". Nét chữ của Đoan Trang góp phần diễn tả được sự sâu sắc của bài thơ.</p>
+          </div>
+          <div class="info">
+            <a class="vote" >Bình chọn</a>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+
+       
+        
+      </div>
+    </div>
+
+    <!-- End Stats -->
+    <!-- Start Discount -->
+    <div class="discount" id="discount">
+      <div class="image">
+        <div class="content">
+          <h2>Liên hệ để tham gia các cuộc thi khác</h2>
+          <p>
+            Cùng nhau tham gia và bình chọn cho các tài năng được tỏa sáng !
+          </p>
+          <img src="https://vov2-media.solidtech.vn/sites/default/files/styles/large/public/2023-08/net-chu-net-nguoi.png" alt="" />
+        </div>
+      </div>
+      <div class="form">
+        <div class="content">
+          <h2>Liên hệ</h2>
+          <form action="">
+            <input class="input" type="text" placeholder="Họ và tên" name="name" />
+            <input class="input" type="email" placeholder="Email của bạn" name="email" />
+            <input class="input" type="text" placeholder="Số điện thoại" name="mobile" />
+            <textarea class="input" placeholder="Nói vài điều về bạn" name="message"></textarea>
+            <input type="submit" value="Send" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End Discount -->
+    <!-- Start Footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="box">
+          <h3>CHUDEP2024</h3>
+          <ul class="social">
+            <li>
+              <a href="#" class="facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="youtube">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+          </ul>
+        
+        </div>
+        
+        <div class="box">
+          <div class="line">
+            <i class="fas fa-map-marker-alt fa-fw"></i>
+            <div class="info">551 Nguyễn Văn Cừ, Gia Thụy, Long Biên, Hà Nội</div>
+          </div>
+          <div class="line">
+            <i class="far fa-clock fa-fw"></i>
+            <div class="info">Mở cửa: Từ 10:00 đến 18:00</div>
+          </div>
+          <div class="line">
+            <i class="fas fa-phone-volume fa-fw"></i>
+            <div class="info">
+              <span>+ 84838540641               </span>
+              <span>+ 843925 2616 
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="box footer-gallery">
+          <img src="imgs/gallery-01.png" alt="" />
+          <img src="imgs/gallery-02.png" alt="" />
+          <img src="imgs/gallery-03.jpg" alt="" />
+          <img src="imgs/gallery-04.png" alt="" />
+          <img src="imgs/gallery-05.jpg" alt="" />
+          <img src="imgs/gallery-06.png" alt="" />
+        </div>
+      </div>
+      <p class="copyright">Cuộc thi viết chữ đẹp 2024</p>
+    </div>
+    <!-- End Footer -->
+    <script src="js/main.js"></script>
+
+    <script>
+      // Lấy tất cả các phần tử có class là 'voteButton'
+      var voteButtons = document.querySelectorAll('.vote');
+      console.log(voteButtons)
+
+      // Lặp qua từng nút và thêm sự kiện click cho mỗi nút
+       // Lặp qua từng nút và thêm sự kiện click cho mỗi nút
+       voteButtons.forEach(function(button) {
+          button.addEventListener('click', function() {
+            console.log("click")
+              // Tạo một div chứa thông báo và biểu tượng tick
+              var popup = document.createElement("div");
+              popup.classList.add("alert", "alert-success", "popup");
+              popup.setAttribute("role", "alert");
+
+              // Tạo biểu tượng tick
+              var icon = document.createElement("i");
+              icon.classList.add("fas", "fa-check", "mr-2");
+
+              // Tạo nội dung thông báo
+
+              var message = document.createTextNode(" Bình chọn bài dự thi thành công !");
+
+              // Thêm biểu tượng và thông báo vào popup
+              popup.appendChild(icon);
+              popup.appendChild(message);
+
+              // Thêm popup vào body của trang
+              document.body.appendChild(popup);
+
+              // Xóa popup sau 3 giây
+              setTimeout(function() {
+                  document.body.removeChild(popup);
+              }, 3000);
+          });
+      });
+  
+  </script>
+  </body>
+</html>

